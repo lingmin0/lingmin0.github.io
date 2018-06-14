@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        数据库实验JDBC - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/aircloud.css">
+    <link rel="stylesheet" href="/css/gitment.css">
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i>  </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar">
+            <img src="/" />
+        </div>
+        <div class="name">
+            <i>Ling Min</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>HOME</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>TAGS</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>ARCHIVES</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>ABOUT</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>SEARCH</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#实验代码"><span class="toc-text">实验代码</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">search</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+        <div class="index-about-mobile">
+            <i>  </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        数据库实验JDBC
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">Post：<span>2018-06-14 15:03:04</span></span>
+        
+        </span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="实验代码"><a href="#实验代码" class="headerlink" title="实验代码"></a>实验代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.sql.*;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">myodbc</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> Statement stmt=<span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> String JDBC_DRIVER=<span class="string">"com.mysql.jdbc.Driver"</span>;<span class="comment">//驱动</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> String DB_URL=<span class="string">"jdbc:mysql://localhost:3306/course"</span>;<span class="comment">//URL 服务器localhost，端口号3306，数据库course</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> String USER=<span class="string">"root"</span>;<span class="comment">//用户</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> String PASS=<span class="string">"2712172"</span>;<span class="comment">//密码</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">add_student</span><span class="params">(String sno,String sname,String ssex,String sage,String sdept)</span></span>&#123;   <span class="comment">//在student表中添加用户信息</span></span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            String a = <span class="string">"INSERT INTO Student "</span> +<span class="string">"VALUES ('"</span>+sno+<span class="string">"','"</span>+ sname+<span class="string">"','"</span>+ssex+<span class="string">"',"</span>+sage+<span class="string">",'"</span>+sdept+<span class="string">"');"</span>;</span><br><span class="line">            stmt.executeUpdate(a);</span><br><span class="line">            System.out.println(<span class="string">"add su1ccess!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span>(SQLException se)&#123;se.printStackTrace();&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">print_Student</span><span class="params">(ResultSet rs)</span></span>&#123;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line"></span><br><span class="line">            System.out.println(<span class="string">"+Sno+-----+Sname+-----+Ssex+-----+Sage+-----+Sdept+"</span>);</span><br><span class="line">            <span class="keyword">while</span>(rs.next())&#123;</span><br><span class="line">                String Sno  = rs.getString(<span class="string">"Sno"</span>);</span><br><span class="line">                String Sname = rs.getString(<span class="string">"Sname"</span>);</span><br><span class="line">                String Ssex = rs.getString(<span class="string">"Ssex"</span>);</span><br><span class="line">                String Sage= rs.getString(<span class="string">"Sage"</span>);</span><br><span class="line">                String Sdept=rs.getString(<span class="string">"Sdept"</span>);</span><br><span class="line">                System.out.println(Sno +<span class="string">",     "</span>+Sname+<span class="string">",     "</span>+Ssex+<span class="string">",     "</span>+Sage+<span class="string">",     "</span>+Sdept);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">" "</span>);</span><br><span class="line">        &#125;<span class="keyword">catch</span>(SQLException se)&#123;se.printStackTrace();&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">update_student</span><span class="params">(String Sno,String column,String a)</span></span>&#123;   <span class="comment">//更新列属性年龄或者系</span></span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            String temp=<span class="string">"111111"</span>;<span class="comment">//初始化</span></span><br><span class="line">            <span class="keyword">if</span>(column.equals(<span class="string">"Sage"</span>))&#123;<span class="comment">//更新属性年龄</span></span><br><span class="line">                temp = <span class="string">"UPDATE Student SET "</span>+column +<span class="string">"="</span>+a+<span class="string">" where Sno='"</span>+Sno+<span class="string">"'"</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(column.equals(<span class="string">"Sdept"</span>)) &#123;<span class="comment">//更新属性Sdept</span></span><br><span class="line">                temp = <span class="string">"UPDATE Student SET "</span> + column + <span class="string">"='"</span> + a + <span class="string">"' where Sno='"</span> + Sno + <span class="string">"'"</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            stmt.executeUpdate(temp);</span><br><span class="line">            System.out.println(<span class="string">"update success!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span>(SQLException se)&#123;se.printStackTrace();&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">delete_student</span><span class="params">(String Sno)</span></span>&#123;   <span class="comment">//学生学号</span></span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            String temp = <span class="string">"DELETE FROM Student where Sno='"</span>+Sno+<span class="string">"'"</span>;<span class="comment">//SQL语句</span></span><br><span class="line">            stmt.executeUpdate(temp);</span><br><span class="line">            System.out.println(<span class="string">"delete success!"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span>(SQLException se)&#123;se.printStackTrace();&#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Connection conn = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Scanner scanner = <span class="keyword">new</span> Scanner(System.in);<span class="comment">//输入流</span></span><br><span class="line"></span><br><span class="line">            Class.forName(<span class="string">"com.mysql.jdbc.Driver"</span>);<span class="comment">//加载驱动</span></span><br><span class="line">            conn = DriverManager.getConnection(DB_URL, USER, PASS);<span class="comment">//创建连接</span></span><br><span class="line">            stmt = conn.createStatement();<span class="comment">//</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;<span class="comment">//循环操作</span></span><br><span class="line">                System.out.println(<span class="string">"查询请按0--插入请按1--更新请按2--删除请按3"</span>);</span><br><span class="line">                <span class="keyword">int</span> flags= Integer.parseInt(scanner.nextLine());</span><br><span class="line">                <span class="keyword">if</span>(flags==<span class="number">0</span>)&#123;                           <span class="comment">//查询信息</span></span><br><span class="line">                    String sql=<span class="string">"select * from Student;"</span>;</span><br><span class="line">                    ResultSet rs= stmt.executeQuery(sql);</span><br><span class="line">                    print_Student(rs);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(flags==<span class="number">1</span>)&#123;<span class="comment">//表示插入        //插入操作</span></span><br><span class="line">                    System.out.println(<span class="string">"请输入：Sno Sname Ssex Sage Sdept"</span>);</span><br><span class="line">                    String nextLine = scanner.nextLine();<span class="comment">//读入一行</span></span><br><span class="line">                    String[] str;</span><br><span class="line">                    str = nextLine.split(<span class="string">","</span>);<span class="comment">//用，作为分割</span></span><br><span class="line">                    add_student(str[<span class="number">0</span>],str[<span class="number">1</span>],str[<span class="number">2</span>],str[<span class="number">3</span>],str[<span class="number">4</span>]);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(flags==<span class="number">2</span>)&#123;<span class="comment">//表示更新</span></span><br><span class="line">                    System.out.println(<span class="string">"请输入更改的学生学号：Sno，更新内容属性-值：colunmn value"</span>);</span><br><span class="line">                    String nextLine = scanner.nextLine();<span class="comment">//读入一行</span></span><br><span class="line">                    String[] str;</span><br><span class="line">                    str = nextLine.split(<span class="string">","</span>);<span class="comment">//用，作为分割</span></span><br><span class="line">                    update_student(str[<span class="number">0</span>],str[<span class="number">1</span>],str[<span class="number">2</span>]);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(flags==<span class="number">3</span>)&#123;<span class="comment">//表示删除</span></span><br><span class="line">                    System.out.println(<span class="string">"请输入要删除的学生学号：Sno"</span>);</span><br><span class="line">                    String Sno= scanner.nextLine();</span><br><span class="line">                    delete_student(Sno);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            conn.close();<span class="comment">//关闭连接</span></span><br><span class="line">        &#125;<span class="keyword">catch</span>(SQLException se)&#123;se.printStackTrace();&#125;</span><br><span class="line">        <span class="keyword">catch</span>(Exception e)&#123;e.printStackTrace();&#125;</span><br><span class="line">        <span class="keyword">finally</span>&#123;</span><br><span class="line">            <span class="keyword">try</span>&#123;<span class="keyword">if</span>(stmt!=<span class="keyword">null</span>)stmt.close();&#125;</span><br><span class="line">            <span class="keyword">catch</span>(SQLException se2)&#123; &#125;<span class="comment">// nothing we can do</span></span><br><span class="line">            <span class="keyword">try</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(conn!=<span class="keyword">null</span>)</span><br><span class="line">                    conn.close();<span class="comment">//关闭连接</span></span><br><span class="line">            &#125;<span class="keyword">catch</span>(SQLException se)&#123; se.printStackTrace();&#125;<span class="comment">//end finally try</span></span><br><span class="line">        &#125;<span class="comment">//end try</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        
+        <div id="comment-container">
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+</html>
