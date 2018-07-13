@@ -56,32 +56,32 @@
             <li >
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
-                    <span>主页</span>
+                    <span>HOME</span>
                 </a>
             </li>
             <li >
                 <a href="/tags">
                     <i class="iconfont icon-biaoqian1"></i>
-                    <span>标签</span>
+                    <span>TAGS</span>
                 </a>
             </li>
             <li >
                 <a href="/archives">
                     <i class="iconfont icon-guidang2"></i>
-                    <span>存档</span>
+                    <span>ARCHIVES</span>
                 </a>
             </li>
             <li >
                 <a href="/about/">
                     <i class="iconfont icon-guanyu2"></i>
-                    <span>关于</span>
+                    <span>ABOUT</span>
                 </a>
             </li>
             
             <li>
                 <a id="search">
                     <i class="iconfont icon-sousuo1"></i>
-                    <span>搜索</span>
+                    <span>SEARCH</span>
                 </a>
             </li>
             
@@ -89,7 +89,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Leetcode-109-Convert-Sorted-List-to-Binary-Search-Tree"><span class="toc-text">Leetcode 109.Convert Sorted List to Binary Search Tree</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#题目描述"><span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#样例"><span class="toc-text">样例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解题思路"><span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码"><span class="toc-text">代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#知识点总结"><span class="toc-text">知识点总结</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title-LeetCode-109"><span class="toc-text">title:LeetCode 109</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Leetcode-109-Convert-Sorted-List-to-Binary-Search-Tree"><span class="toc-text">Leetcode 109.Convert Sorted List to Binary Search Tree</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#题目描述"><span class="toc-text">题目描述</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#样例"><span class="toc-text">样例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解题思路"><span class="toc-text">解题思路</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#代码"><span class="toc-text">代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#知识点总结"><span class="toc-text">知识点总结</span></a></li></ol></li></ol></li></ol>
 </div>
     
 </div>
@@ -100,7 +100,7 @@
         <div class="search-input">
             <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
             <input id="search-input"/>
-            <span id="begin-search">搜索</span>
+            <span id="begin-search">search</span>
         </div>
         <div class="search-result-container" id="search-result-container">
 
@@ -123,15 +123,16 @@
     </div>
 
     <div class="post-meta">
-        <span class="attr">发布于：<span>2018-07-13 15:58:30</span></span>
+        <span class="attr">Post：<span>2018-07-13 15:58:30</span></span>
         
         </span>
-        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+        <span class="attr">Visit：<span id="busuanzi_value_page_pv"></span>
 </span>
 </span>
     </div>
     <div class="post-content ">
-        <h3 id="Leetcode-109-Convert-Sorted-List-to-Binary-Search-Tree"><a href="#Leetcode-109-Convert-Sorted-List-to-Binary-Search-Tree" class="headerlink" title="Leetcode 109.Convert Sorted List to Binary Search Tree"></a>Leetcode 109.Convert Sorted List to Binary Search Tree</h3><h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.</p>
+        <hr>
+<h2 id="title-LeetCode-109"><a href="#title-LeetCode-109" class="headerlink" title="title:LeetCode 109"></a>title:LeetCode 109</h2><h3 id="Leetcode-109-Convert-Sorted-List-to-Binary-Search-Tree"><a href="#Leetcode-109-Convert-Sorted-List-to-Binary-Search-Tree" class="headerlink" title="Leetcode 109.Convert Sorted List to Binary Search Tree"></a>Leetcode 109.Convert Sorted List to Binary Search Tree</h3><h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.</p>
 <p>For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of <em>every</em> node never differ by more than 1.</p>
 <p>（给定单个链接列表，其中元素按升序排序，将其转换为高度平衡的BST。对于这个问题，高度平衡的二叉树被定义为二叉树，其中每个节点的两个子树的深度从不相差超过1。）</p>
 <h4 id="样例"><a href="#样例" class="headerlink" title="样例"></a>样例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Given the sorted linked list: [-10,-3,0,5,9],</span><br><span class="line"></span><br><span class="line">One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST:</span><br><span class="line"></span><br><span class="line">      0</span><br><span class="line">     / \</span><br><span class="line">   -3   9</span><br><span class="line">   /   /</span><br><span class="line"> -10  5</span><br></pre></td></tr></table></figure>
